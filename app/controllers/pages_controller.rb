@@ -1,6 +1,67 @@
 class PagesController < ApplicationController
   def home
     data = FakerList.new
-    @data = data.get_data.sort
+    data_classes = data.get_classes.sort
+    delete_this_classes = [
+      "Base", 
+      "Blockchain",
+      "Books",
+      "BossaNova",
+      "Cannabis",
+      "ChileRut",
+      "ChuckNorris",
+      "Color",
+      "Commerce",
+      "Company",
+      "Compass",
+      "Creature",
+      "Crypto",
+      "CryptoCoin",
+      "Date",
+      "DcComics",
+      "DrivingLicence",
+      "Drone",
+      "ElectricalComponents",
+      "Fantasy",
+      "File",
+      "Fillmurray",
+      "FunnyName",
+      "Games",
+      "GreekPhilosophers",
+      "Hacker",
+      "IDNumber",
+      "IndustrySegments",
+      "Internet",
+      "InvalidStatePassed",
+      "Invoice",
+      "JapaneseMedia",
+      "Lorem",
+      "LoremFlickr",
+      "Movies",
+      "NationalHealthService",
+      "NatoPhoneticAlphabet",
+      "Omniauth",
+      "PhoneNumber",
+      "Placeholdit",
+      "ProgrammingLanguage",
+      "Quotes",
+      "SlackEmoji",
+      "Source",
+      "SouthAfrica",
+      "Sports",
+      "String",
+      "Stripe",
+      "Travel",
+      "TvShows",
+      "Twitter",
+      "Types",
+      "UniqueGenerator",
+      "Vehicle",
+      "VulnerabilityIdentifier",
+      "WorldCup",
+
+    ]
+    delete_this_classes.each {|this_class| data_classes.delete(this_class)}
+    @data = data_classes
   end
 end

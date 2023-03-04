@@ -7,16 +7,24 @@
   </head>
   <body>
     <div class="container">
-        <select class="form-select" aria-label="Default select example">
+      <div class="mb-3">
+          <select class="form-select" id="data-class">
             <% @data.each do |fake_data, index|%>
-                    <option value="<%= index%>"><%= fake_data %></option>
+              <option value="<%= index%>"><%= fake_data %></option>
             <% end %>
-        </select>
+          </select>
+      </div>
+   
+      <div class="input-group mb-3">
+        <button class="btn btn-dark" type="button" id="data-submit">Submit</button>
+        <input type="text" class="form-control" placeholder="10" id="data-quantity">
+      </div>
     </div>
-<br>
-    <div class="container text-center">
-        <div class="card" style= "height:700px;">
-            <div class="card-body">
+    
+    <br>
+    <div class="container text-center" style="overflow:auto;">
+        <div class="card" style= "height:700px;overflow:auto;">
+            <div class="card-body" id="data-content">
 
             </div>
         </div>
