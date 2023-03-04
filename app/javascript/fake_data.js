@@ -34,6 +34,3 @@ submit_btn.addEventListener('click', function(){
 
     xhttp.send(params);
 })
-
-
-console.log("fake data out")
