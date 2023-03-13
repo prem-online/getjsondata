@@ -44,7 +44,7 @@ require 'faker'
 
     def get_address(data_class, quantity)
         data = Faker.const_get data_class.capitalize
-        met18 = data.methods[18]
+        met18 = data.methods[0]
         send_result(quantity,data,met18)
     end
 
